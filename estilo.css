@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column; 
     justify-content: center; 
@@ -10,8 +10,39 @@ body {
   }
   
   h1 {
-    color: rgb(42, 127, 255);
+    color: rgb(255, 255, 255);
     text-align: center;
+    animation: glow 1.5s infinite alternate;
+    text-shadow: 
+    0 0 5px #0ff, /* Sombra suave */
+    0 0 10px #0ff, 
+    0 0 20px #0ff, 
+    0 0 30px #00f, 
+    0 0 40px #00f, 
+    0 0 50px #00f;
+    animation: neon-blink 1s infinite;
+  }
+  
+
+  @keyframes neon-blink {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px #0ff, 
+        0 0 10px #0ff, 
+        0 0 20px #0ff, 
+        0 0 30px #00f, 
+        0 0 40px #00f, 
+        0 0 50px #00f; /* Máximo brillo */
+    }
+    50% {
+      text-shadow: 
+        0 0 2px #0ff, 
+        0 0 4px #0ff, 
+        0 0 8px #0ff, 
+        0 0 12px #00f, 
+        0 0 16px #00f, 
+        0 0 20px #00f; /* Brillo reducido */
+    }
   }
 
   .vertical-list {
@@ -33,7 +64,7 @@ body {
   .vertical-list li {
     padding: 10px 0;
     font-size: 18px; 
-    color: #333; 
+    color: #ffffff; 
     cursor: pointer; 
     transition: font-weight 0.3s ease;
     margin: 10px 0; 
@@ -44,5 +75,13 @@ body {
   
   .vertical-list li:hover {
     font-weight: bold; 
-    
+    text-shadow: 
+    0 0 5px #0ff, /* Sombra suave */
+    0 0 10px #0ff, 
+    0 0 20px #0ff, 
+    0 0 30px #00f, 
+    0 0 40px #00f, 
+    0 0 50px #00f; /* Brillo más intenso */
+  color: rgb(255, 255, 255); /* Cambia el color del texto para realzar el efecto */
   }
+
